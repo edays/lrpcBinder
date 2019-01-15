@@ -1,0 +1,29 @@
+Group members:
+ - Jiayi Liu (j457liu, 20559609)
+ - Vivian Dai (vdai, 20550555)
+
+Other libraries used:
+ - pthread
+
+To compile librpc.a and binder:
+make
+
+To compile client:
+g++ -L. client.o -lrpc -o client
+
+To compile server:
+g++ -L. server functions.o server function skels.o server.o -lrpc -o server
+
+To run:
+./binder
+Set BINDER_ADDRESS and BINDER_PORT environment variables on the client and server
+./server
+./client
+
+----------
+
+To compile client (testing with default files):
+make client
+
+To compile server (testing with default files):
+make server
